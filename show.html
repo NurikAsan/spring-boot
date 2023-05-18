@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Person</title>
+    <style>
+        div{
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div th:each="p : ${person}">
+    <a th:href="@{/first/{id}(id=${p.getId})}" th:text="${p.getName()}">user</a>
+</div>
+<a href="first/new">Create</a>
+</body>
+</html>
